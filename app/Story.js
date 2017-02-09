@@ -8,32 +8,28 @@ export default class Story extends Component {
     return (
       <View style={styles.container}>
         <Text style={styles.welcome}>
-            Welcome to React Native!
+            This is the screen where im going to show you options.
         </Text>
         <Text style={styles.instructions}>
-            To get started, edit index.android.js
+            Options....
         </Text>
         <Text style={styles.instructions}>
-            Double tap R on your keyboard to reload,{'\n'}
-            Shake or press menu button for dev menu
+            Just select one and will go for it!! {global.story.name}
         </Text>
-        <Button raised icon={{
-            name: 'cached'
-        }} title='RAISED WITH ICON' />
-      <ScrollView horizontal={true}>
-        <Card title='Option 1' containerStyle={styles.card}>
-          <Text>
-            Hello! This is a line. It will get longer and longer hehe.
-            The idea is that I will put a container for this card view as a scrollable list!
-          </Text>
-        </Card>
-        <Card title='Option 1' containerStyle={styles.card}>
-          <Text>
-            Hello! This is a line. It will get longer and longer hehe.
-            The idea is that I will put a container for this card view as a scrollable list!
-          </Text>
-        </Card>
-      </ScrollView>
+        <ScrollView horizontal={true}>
+          <Card title='Option 1' containerStyle={styles.card}>
+            <Text>
+              Hello! This is a line. It will get longer and longer hehe.
+              The idea is that I will put a container for this card view as a scrollable list!
+            </Text>
+          </Card>
+          <Card title='Option 1' containerStyle={styles.card}>
+            <Text>
+              Hello! This is a line. It will get longer and longer hehe.
+              The idea is that I will put a container for this card view as a scrollable list!
+            </Text>
+          </Card>
+        </ScrollView>
       </View>
     )
   }

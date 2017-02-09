@@ -10,12 +10,13 @@ import {Tabs, Tab, Icon} from 'react-native-elements'
 import Feed from './Feed'
 import Story from './Story'
 
+import MyOnlyStory from './stories/MyOnlyStory/main'
+
 export default class Main extends Component {
   constructor() {
       super();
-      this.state = {
-          selectedTab: 'story'
-      }
+      story = new MyOnlyStory();
+      global.story = story;
   }
 
   changeTab(selectedTab) {

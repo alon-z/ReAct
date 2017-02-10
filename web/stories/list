@@ -1,0 +1,12 @@
+[
+  {
+    "name": "My Only Story",
+    "description": "This is a story about a man who walked 2000km to find his destiny",
+    "location": "MyOnlyStory"
+  },
+  {
+    "name": "This story is unavailable",
+    "description": "This is a story unavailable right now",
+    "location": ""
+  }
+]

@@ -14,7 +14,7 @@ export default class Story extends Component {
             Options....
         </Text>
         <Text style={styles.instructions}>
-            Just select one and will go for it!! {global.story.name}
+            Just select one and will go for it!!
         </Text>
         <ScrollView horizontal={true}>
           <Card title='Option 1' containerStyle={styles.card}>

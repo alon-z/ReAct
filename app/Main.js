@@ -7,16 +7,16 @@ import {
     StyleSheet,
 } from 'react-native';
 import {Tabs, Tab, Icon} from 'react-native-elements'
-import Feed from './Feed'
+import Store from './Store'
 import Story from './Story'
-
-import MyOnlyStory from './stories/MyOnlyStory/main'
 
 export default class Main extends Component {
   constructor() {
       super();
-      story = new MyOnlyStory();
-      global.story = story;
+      this.state = {
+          selectedTab: 'story'
+      }
+      global.server = "10.0.0.10:8080";
   }
 
   changeTab(selectedTab) {
@@ -41,12 +41,12 @@ export default class Main extends Component {
           <Tab
             titleStyle={{fontWeight: 'bold', fontSize: 10}}
             selectedTitleStyle={{marginTop: -1, marginBottom: 6}}
-            selected={selectedTab === 'feed'}
-            title={selectedTab === 'feed' ? 'FEED' : null}
+            selected={selectedTab === 'store'}
+            title={selectedTab === 'store' ? 'STORE' : null}
             renderIcon={() => <Icon containerStyle={{justifyContent: 'center', alignItems: 'center', marginTop: 12}} color={'#5e6977'} name='whatshot' size={33} />}
             renderSelectedIcon={() => <Icon color={'#6296f9'} name='whatshot' size={30} />}
-            onPress={() => this.changeTab('feed')}>
-            <Feed />
+            onPress={() => this.changeTab('store')}>
+            <Store />
           </Tab>
         </Tabs>
       </View>
